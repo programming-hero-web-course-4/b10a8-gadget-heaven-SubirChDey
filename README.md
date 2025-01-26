@@ -53,5 +53,5 @@ This project utilizes the following React fundamental concepts:
 
 ---
 
-## 📂 Folder Structure
+
 

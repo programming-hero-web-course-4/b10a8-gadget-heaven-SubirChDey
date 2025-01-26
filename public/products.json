@@ -1,0 +1,135 @@
+[
+    {
+      "product_id": 1,
+      "product_title": "Gaming Laptop X1",
+      "product_image": "https://i.ibb.co.com/0ZvKK1z/lenovo-laptops-x1-carbon-6th-gen-hero.webp",
+      "category": "Laptops",
+      "price": 1200,
+      "description": "A high-performance laptop for gaming and multitasking.",
+      "Specification": ["16GB RAM", "1TB SSD", "NVIDIA RTX 3060"],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 2,
+      "product_title": "Workstation Pro",
+      "product_image": "https://i.ibb.co.com/BZRJj4w/c08679272.png",
+      "category": "Laptops",
+      "price": 1500,
+      "description": "A powerful workstation designed for demanding tasks.",
+      "Specification": ["32GB RAM", "2TB SSD", "NVIDIA RTX 4080"],
+      "availability": false,
+      "rating": 4.7
+    },
+    {
+        "product_id": 3,
+        "product_title": "Smartwatch Alpha",
+        "product_image": "https://i.ibb.co.com/ZfYHPw7/noise-colorfit-pro-4-alpha.jpg",
+        "category": "Smart Watches",
+        "price": 200,
+        "description": "Feature-packed smartwatch for fitness and notifications.",
+        "Specification": ["Heart Rate Monitor", "GPS", "7-Day Battery Life"],
+        "availability": true,
+        "rating": 4.5
+      },
+    {
+      "product_id": 4,
+      "product_title": "Student Laptop Lite",
+      "product_image": "https://i.ibb.co.com/RvT5Bg2/acer-aspire-lite-al15-52-standard-laptop-intel-core-i3-1215u-processor-ddr4-8gb-512-gb-intel-uhd-gra.webp",
+      "category": "Laptops",
+      "price": 450,
+      "description": "Lightweight and affordable, perfect for students.",
+      "Specification": ["8GB RAM", "128GB SSD", "AMD Ryzen 5"],
+      "availability": true,
+      "rating": 4.0
+    },
+    {
+        "product_id": 5,
+        "product_title": "Smartwatch Zeta",
+        "product_image": "https://i.ibb.co.com/y4H6mTK/618-E7-Lw-Yk-GL-AC-UF1000-1000-QL80.jpg",
+        "category": "Smart Watches",
+        "price": 300,
+        "description": "Premium smartwatch with advanced health tracking.",
+        "Specification": ["Blood Oxygen Monitor", "Waterproof", "10-Day Battery Life"],
+        "availability": false,
+        "rating": 4.8
+      },
+    {
+      "product_id": 6,
+      "product_title": "Gaming Beast G7",
+      "product_image": "https://i.ibb.co.com/qkK3cm4/dell-g7-15-gaming-laptop-3.jpg",
+      "category": "Laptops",
+      "price": 2000,
+      "description": "A top-tier gaming laptop with cutting-edge performance.",
+      "Specification": ["64GB RAM", "2TB SSD", "NVIDIA RTX 4090"],
+      "availability": false,
+      "rating": 4.9
+    },
+    {
+      "product_id": 7,
+      "product_title": "Smartphone P10",
+      "product_image": "https://i.ibb.co.com/9y1Zwj4/giant-55862.jpg",
+      "category": "Phones",
+      "price": 800,
+      "description": "A powerful smartphone with an amazing camera.",
+      "Specification": ["128GB Storage", "6.5-inch Display", "5000mAh Battery"],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+        "product_id": 8,
+        "product_title": "Budget Laptop 15",
+        "product_image": "https://i.ibb.co.com/0KgB7Ft/c08403056.png",
+        "category": "Laptops",
+        "price": 550,
+        "description": "An affordable laptop for everyday use and browsing.",
+        "Specification": ["4GB RAM", "256GB SSD", "Intel i3"],
+        "availability": true,
+        "rating": 4.2
+      },
+    {
+      "product_id": 9,
+      "product_title": "Smartphone Lite X",
+      "product_image": "https://i.ibb.co.com/bB2416x/Realme-3i-Diamond-Black-500x500.jpg",
+      "category": "Phones",
+      "price": 600,
+      "description": "Affordable smartphone with essential features.",
+      "Specification": ["64GB Storage", "6.1-inch Display", "4000mAh Battery"],
+      "availability": true,
+      "rating": 4.3
+    },    
+    {
+      "product_id": 10,
+      "product_title": "MacBook Air M1",
+      "product_image": "https://i.ibb.co.com/q7RP0qw/111883-macbookair.png",
+      "category": "MacBook",
+      "price": 999,
+      "description": "Lightweight and powerful MacBook Air with M1 chip.",
+      "Specification": ["8GB RAM", "256GB SSD", "Apple M1 Chip"],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+        "product_id": 11,
+        "product_title": "Ultrabook Z5",
+        "product_image": "https://i.ibb.co.com/z64xM5L/Illegear-Z5-Back.jpg",
+        "category": "Laptops",
+        "price": 900,
+        "description": "A sleek ultrabook perfect for professionals on the go.",
+        "Specification": ["8GB RAM", "512GB SSD", "Intel i7"],
+        "availability": true,
+        "rating": 4.5
+      }, 
+    {
+      "product_id": 12,
+      "product_title": "MacBook Pro M2",
+      "product_image": "https://i.ibb.co.com/B24gy48/Mac-Book-Pro-M2.jpg",
+      "category": "MacBook",
+      "price": 1299,
+      "description": "High-performance MacBook Pro with the latest M2 chip.",
+      "Specification": ["16GB RAM", "512GB SSD", "Apple M2 Chip"],
+      "availability": false,
+      "rating": 4.8
+    }
+  ]
+  

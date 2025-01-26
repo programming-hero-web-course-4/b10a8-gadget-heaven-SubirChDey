@@ -9,15 +9,14 @@ import ErrorPage from "../pages/ErrorPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout></MainLayout>,
-    errorElement: (
-      <ErrorPage />      
-    ),
+    element: <MainLayout></MainLayout>,    
+    errorElement: <ErrorPage></ErrorPage>, 
     children: [
       {
         path: "/",
-        element: <Home></Home>          
-      },
+        element: <Home></Home>,
+        loader: () => fetch('../products.json'),
+      },      
       {
         path: "statistics",
         element: <Statistics></Statistics>
