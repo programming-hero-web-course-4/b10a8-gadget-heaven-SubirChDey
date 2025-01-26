@@ -25,17 +25,19 @@ const Navbar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         <NavLink to={'/'}>Home</NavLink>
-                        <NavLink to={''}>Statistics</NavLink>
-                        <NavLink to={'dashboard'}>Dashboard</NavLink>
+                        <NavLink to={'/statistics'}>Statistics</NavLink>
+                        <NavLink to={'/dashboard'}>Dashboard</NavLink>
+                        <NavLink to={'/trending'}>Trending</NavLink>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">Gadget Heaven</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 gap-14">
+                <ul className="menu menu-horizontal px-1 gap-10">
                     <NavLink to={'/'}>Home</NavLink>
-                    <NavLink to={''}>Statistics</NavLink>
-                    <NavLink to={'dashboard'}>Dashboard</NavLink>
+                    <NavLink to={'/statistics'}>Statistics</NavLink>
+                    <NavLink to={'/dashboard'}>Dashboard</NavLink>
+                    <NavLink to={'/trending'}>Trending</NavLink>
                 </ul>
             </div>
             <div className="navbar-end gap-4 text-black">
