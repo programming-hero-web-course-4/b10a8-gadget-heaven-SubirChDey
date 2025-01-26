@@ -27,7 +27,7 @@ const Navbar = () => {
                         <NavLink to={'/'}>Home</NavLink>
                         <NavLink to={'/statistics'}>Statistics</NavLink>
                         <NavLink to={'/dashboard'}>Dashboard</NavLink>
-                        <NavLink to={'/trending'}>Products</NavLink>
+                        <NavLink to={'/trending'}>Trending</NavLink>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">Gadget Heaven</a>
@@ -37,7 +37,7 @@ const Navbar = () => {
                     <NavLink to={'/'}>Home</NavLink>
                     <NavLink to={'/statistics'}>Statistics</NavLink>
                     <NavLink to={'/dashboard'}>Dashboard</NavLink>
-                    <NavLink to={'/trending'}>Products</NavLink>
+                    <NavLink to={'/trending'}>Trending</NavLink>
                    
                 </ul>
             </div>
