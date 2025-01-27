@@ -16,11 +16,11 @@ const Banner = () => {
 
 
             </div>
-            <div className="flex justify-center h-96">
-                <div className="max-w-4xl  border-2 border-red-200 relative -top-52 p-4 rounded-3xl">
-                    <img className="rounded-3xl" src="./../src/assets/banner.jpg" alt="" />
+            
+                <div className="flex justify-center h-96 max-w-4xl mx-auto  border-2 border-white bg-white/30 relative -top-52 p-4 rounded-3xl">
+                    <img className="rounded-3xl w-full" src="../banner.jpg" alt="" />
                 </div>
-            </div>
+           
 
         </div>
     )

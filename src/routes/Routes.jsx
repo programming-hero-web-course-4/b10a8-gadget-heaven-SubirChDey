@@ -5,6 +5,8 @@ import Products from "../pages/Products";
 import Dashboard from "../pages/Dashboard";
 import Statistics from "../pages/Statistics";
 import ErrorPage from "../pages/ErrorPage";
+import Trending from "../pages/Trending";
+
 
 const router = createBrowserRouter([
   {
@@ -15,8 +17,19 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('../categories.json'),
-        loader: () => fetch('../products.json'),
+        loader: () => fetch('../categories.json'),        
+        children: [
+          {
+            path: "/",
+            element: <Products></Products>,
+            loader: () => fetch('../products.json'),
+          },
+          {
+            path: "/category/:category",
+            element: <Products></Products>,
+            loader: () => fetch('../products.json'),
+          },
+        ],
       },      
       {
         path: "statistics",
@@ -28,7 +41,8 @@ const router = createBrowserRouter([
       },
       {
         path: "trending",
-        element: <Products></Products>
+        element: <Trending></Trending>,
+        loader: () => fetch('../products.json'),
       }
     ]
   },

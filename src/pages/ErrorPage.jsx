@@ -1,6 +1,10 @@
 import React from 'react'
+import { useEffect } from "react";
 
 const ErrorPage = () => {
+      useEffect(() => {
+        document.title = "Error | Gadget heaven";
+      }, []);
     return (
         <div>
             <div>
