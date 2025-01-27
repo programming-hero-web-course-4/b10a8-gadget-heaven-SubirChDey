@@ -1,10 +1,14 @@
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useLocation } from "react-router-dom"
 import { MdFavoriteBorder } from "react-icons/md";
 import { IoCartOutline } from "react-icons/io5";
 
+
 const Navbar = () => {
-    return (
-        <div className="navbar bg-[#9538E2] w-11/12 mx-auto rounded-t-2xl text-white lg:px-10 lg:pt-8 z-50 sticky top-0">
+    const {pathname} = useLocation()
+    return (        
+        <div className={`navbar  w-11/12 mx-auto rounded-t-2xl lg:px-10 lg:pt-8 z-50 sticky top-0 ${
+            pathname === "/" ? "bg-[#9538E2] text-white" : "bg-white"
+          }`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -8,7 +8,8 @@
       "description": "A high-performance laptop for gaming and multitasking.",
       "Specification": ["16GB RAM", "1TB SSD", "NVIDIA RTX 3060"],
       "availability": true,
-      "rating": 4.8
+      "rating": 4.8,
+      "sold": 151
     },
     {
       "product_id": 2,
@@ -19,7 +20,8 @@
       "description": "A powerful workstation designed for demanding tasks.",
       "Specification": ["32GB RAM", "2TB SSD", "NVIDIA RTX 4080"],
       "availability": false,
-      "rating": 4.7
+      "rating": 4.7,
+      "sold": 348
     },
     {
         "product_id": 3,
@@ -30,7 +32,8 @@
         "description": "Feature-packed smartwatch for fitness and notifications.",
         "Specification": ["Heart Rate Monitor", "GPS", "7-Day Battery Life"],
         "availability": true,
-        "rating": 4.5
+        "rating": 4.5,
+        "sold": 480
       },
     {
       "product_id": 4,
@@ -41,7 +44,8 @@
       "description": "Lightweight and affordable, perfect for students.",
       "Specification": ["8GB RAM", "128GB SSD", "AMD Ryzen 5"],
       "availability": true,
-      "rating": 4.0
+      "rating": 4.0,
+      "sold": 720
     },
     {
         "product_id": 5,
@@ -52,7 +56,8 @@
         "description": "Premium smartwatch with advanced health tracking.",
         "Specification": ["Blood Oxygen Monitor", "Waterproof", "10-Day Battery Life"],
         "availability": false,
-        "rating": 4.8
+        "rating": 4.8,
+        "sold": 227
       },
     {
       "product_id": 6,
@@ -63,7 +68,8 @@
       "description": "A top-tier gaming laptop with cutting-edge performance.",
       "Specification": ["64GB RAM", "2TB SSD", "NVIDIA RTX 4090"],
       "availability": false,
-      "rating": 4.9
+      "rating": 4.9,
+      "sold": 2500
     },
     {
       "product_id": 7,
@@ -74,7 +80,8 @@
       "description": "A powerful smartphone with an amazing camera.",
       "Specification": ["128GB Storage", "6.5-inch Display", "5000mAh Battery"],
       "availability": true,
-      "rating": 4.6
+      "rating": 4.6,
+      "sold": 1100
     },
     {
         "product_id": 8,
@@ -85,7 +92,8 @@
         "description": "An affordable laptop for everyday use and browsing.",
         "Specification": ["4GB RAM", "256GB SSD", "Intel i3"],
         "availability": true,
-        "rating": 4.2
+        "rating": 4.2,
+        "sold": 1400
       },
     {
       "product_id": 9,
@@ -96,7 +104,8 @@
       "description": "Affordable smartphone with essential features.",
       "Specification": ["64GB Storage", "6.1-inch Display", "4000mAh Battery"],
       "availability": true,
-      "rating": 4.3
+      "rating": 4.3,
+      "sold": 502
     },    
     {
       "product_id": 10,
@@ -107,7 +116,8 @@
       "description": "Lightweight and powerful MacBook Air with M1 chip.",
       "Specification": ["8GB RAM", "256GB SSD", "Apple M1 Chip"],
       "availability": true,
-      "rating": 4.9
+      "rating": 4.9,
+      "sold": 980
     },
     {
         "product_id": 11,
@@ -118,7 +128,8 @@
         "description": "A sleek ultrabook perfect for professionals on the go.",
         "Specification": ["8GB RAM", "512GB SSD", "Intel i7"],
         "availability": true,
-        "rating": 4.5
+        "rating": 4.5,
+        "sold": 215
       }, 
     {
       "product_id": 12,
@@ -129,7 +140,8 @@
       "description": "High-performance MacBook Pro with the latest M2 chip.",
       "Specification": ["16GB RAM", "512GB SSD", "Apple M2 Chip"],
       "availability": false,
-      "rating": 4.8
+      "rating": 4.8,
+      "sold": 625
     }
   ]
   

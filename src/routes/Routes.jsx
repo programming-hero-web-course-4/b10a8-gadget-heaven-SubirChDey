@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('../categories.json'),        
+        loader: () => fetch('../categories.json'),
         children: [
           {
             path: "/",
@@ -38,7 +38,8 @@ const router = createBrowserRouter([
       },
       {
         path: "dashboard",
-        element: <Dashboard></Dashboard>
+        element: <Dashboard></Dashboard>,
+     
       },
       {
         path: "trending",
