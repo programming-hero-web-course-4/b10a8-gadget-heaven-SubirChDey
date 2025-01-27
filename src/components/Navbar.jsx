@@ -34,10 +34,10 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-10">
-                    <NavLink to={'/'}>Home</NavLink>
-                    <NavLink  to={'/statistics'}>Statistics</NavLink>
-                    <NavLink to={'/dashboard'}>Dashboard</NavLink>
-                    <NavLink to={'/trending'}>Trending</NavLink>
+                    <NavLink className={({isActive}) => `${isActive? 'font-bold underline': ''} hover:text-warning`} to={'/'}>Home</NavLink>
+                    <NavLink className={({isActive}) => `${isActive? 'font-bold underline': ''} hover:text-warning`} to={'/statistics'}>Statistics</NavLink>
+                    <NavLink className={({isActive}) => `${isActive? 'font-bold underline': ''} hover:text-warning`} to={'/dashboard'}>Dashboard</NavLink>
+                    <NavLink className={({isActive}) => `${isActive? 'font-bold underline': ''} hover:text-warning`} to={'/trending'}>Trending</NavLink>
                    
                 </ul>
             </div>
