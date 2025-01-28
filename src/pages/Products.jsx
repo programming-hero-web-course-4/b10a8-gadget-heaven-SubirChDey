@@ -15,6 +15,7 @@ const Products = () => {
     } else {
       setProducts(data.slice(0, 10))
     }
+
   }, [category, data])
 
   return (

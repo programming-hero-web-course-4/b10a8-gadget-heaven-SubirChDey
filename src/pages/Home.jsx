@@ -24,20 +24,11 @@ const Home = () => {
       <div className=" lg:flex w-11/12 mx-auto mt-12]">
         <div>
           <Categories categories={categories}></Categories>
-        </div>
-        {/* <div className=" flex flex-col justify-start items-start gap-5 w-60 mt-20">
-          <NavLink className="tab tab-active">All Products</NavLink>          
-          <NavLink className="tab">Laptops</NavLink>
-          <NavLink className="tab">Phones</NavLink>
-          <NavLink className="tab">Smart Watches</NavLink>
-          <NavLink className="tab">MacBook</NavLink>
-          <NavLink className="tab">iPhone</NavLink>
-        </div> */}
-        <Outlet></Outlet>
-        {/* <Products></Products> */}
+        </div>        
+        <Outlet></Outlet>        
       </div>
       <div className="flex justify-center items-center">
-        <button className="btn text-[#9538E2] border-2 border-[#9538E2] rounded-full font-bold hover:bg-blue-500 hover:text-white" onClick={() => navigate('/trending')}> Trending Products </button>
+        <button className="btn text-[#9538E2] border-2 border-[#9538E2] rounded-full font-bold hover:bg-blue-500 hover:text-white" onClick={() => navigate('/trending') }> Trending Products </button>
       </div>
 
 
