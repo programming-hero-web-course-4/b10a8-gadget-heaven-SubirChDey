@@ -1,15 +1,29 @@
 import { useEffect, useState } from "react";
-import { getAllFavorites, removeFavorite } from "../Utilities";
-// import Product from "./Product";
+import { getAllCarts, getAllFavorites, removeCart, removeFavorite } from "../Utilities";
 import Favorite from "../components/Favorite";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import Cart from "../components/Cart";
 
 const Dashboard = () => {
+  const [cartProducts, setCartProducts] = useState([])
   const [products, setProducts] = useState([])
-
+  
   useEffect(() => {
     document.title = "Dashboard | Gadget heaven";
   }, []);
+
+  useEffect(() => {
+    const carts = getAllCarts()
+    setCartProducts(carts)
+  }, [])
+
+  const handleCartRemove = id => {
+    removeCart(id)
+    console.log(id);
+    
+    const carts = getAllCarts()
+    setCartProducts(carts)
+  }
 
   useEffect(() => {
     const favorites = getAllFavorites()
@@ -45,10 +59,15 @@ const Dashboard = () => {
         </div>
         <div className="rounded-3x w-10/12 mx-auto">
           {
+            cartProducts.map(product => <Cart handleCartRemove={handleCartRemove} key={product.product_id} product={product}></Cart>)
+          }
+        </div>
+        <div className="rounded-3x w-10/12 mx-auto">
+          {
             products.map(product => <Favorite handleFavRemove={handleFavRemove} key={product.product_id} product={product}></Favorite>)
           }
         </div>
-      </div>      
+      </div>
     </div>
   )
 }

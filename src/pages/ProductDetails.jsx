@@ -4,7 +4,7 @@ import { MdFavoriteBorder } from "react-icons/md";
 import { IoCartOutline } from "react-icons/io5";
 import { MdOutlineStarHalf } from "react-icons/md";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import { addFavorite } from "../Utilities";
+import { addCart, addFavorite } from "../Utilities";
 
 
 const ProductDetails = () => {
@@ -30,7 +30,7 @@ const ProductDetails = () => {
 
   const [isFavorite, setIsFavourite] = useState(true)
 
-  useEffect(() => {    
+  useEffect(() => {
     const singleProduct = products.find(product => product.product_id === parseInt(id))
     console.log(singleProduct);
 
@@ -41,6 +41,9 @@ const ProductDetails = () => {
 
   if (!product) {
     return <p>Loading...</p>;
+  }
+  const handleCart = (product) => {
+    addCart(product)
   }
 
   const handleFavorite = (product) => {
@@ -67,7 +70,7 @@ const ProductDetails = () => {
 
           <div className="my-4">
             <h3 className="font-semibold my-2">Specification</h3>
-            <ol className="list-decimal list-inside mt-2 text-gray-600">              
+            <ol className="list-decimal list-inside mt-2 text-gray-600">
               {product.Specification?.map((spec, i) => (
                 <li key={i}>{spec}</li>
               )) || <li>No specifications available</li>
@@ -82,8 +85,8 @@ const ProductDetails = () => {
             <div className="flex gap-1">{renderStars(product.rating)}</div> <div>{product.rating}</div>
           </div>
           <div className="flex justify-start gap-8 my-3">
-            <div className="flex items-center gap-1 bg-[#9538E2] py-2 px-4 rounded-full text-white"><button> Add To Card </button> <IoCartOutline className=" w-5 h-5" /></div>
-            <button onClick={()=>handleFavorite(product)} className="border-2 border-gray-200 rounded-full p-2"> <MdFavoriteBorder className=" w-5 h-5" />
+            <div onClick={() => handleCart(product)} className="flex items-center gap-1 bg-[#9538E2] py-2 px-4 rounded-full text-white"><button> Add To Card </button> <IoCartOutline className=" w-5 h-5" /></div>
+            <button onClick={() => handleFavorite(product)} className="border-2 border-gray-200 rounded-full p-2"> <MdFavoriteBorder className=" w-5 h-5" />
             </button>
           </div>
         </div>
