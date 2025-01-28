@@ -13,7 +13,7 @@ const Categories = ({ categories }) => {
             )
 
           }
-
+          
                   
         </div>
 

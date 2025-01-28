@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom"
+import { useLoaderData, useNavigate, useParams } from "react-router-dom"
 import Product from "./Product"
 import { useEffect, useState } from "react"
 
@@ -9,11 +9,15 @@ const Products = () => {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    if (category) {
-      const filteredByCategory = [...data].filter(product => product.category === category)
-      setProducts(filteredByCategory)
-    } else {
-      setProducts(data.slice(0, 10))
+
+    if (category === "All Products") {
+      setProducts(data);
+    } else if (category) {
+      const filteredByCategory = [...data].filter(product => product.category === category);
+      setProducts(filteredByCategory);
+    }
+    else {
+      setProducts(data);
     }
 
   }, [category, data])
@@ -25,7 +29,12 @@ const Products = () => {
           products.map(product => <Product key={product.id} product={product}></Product>)
         }
       </div>
-      
+      <div className="flex justify-center border-2 border-red-500">
+        {products.length === 0 && <div><p className=" text-3xl text-center items-center border-2  w-72">No products found</p></div>}
+                
+      </div>
+
+
 
     </div>
   )

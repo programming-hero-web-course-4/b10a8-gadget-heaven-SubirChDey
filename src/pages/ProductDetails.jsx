@@ -4,6 +4,7 @@ import { MdFavoriteBorder } from "react-icons/md";
 import { IoCartOutline } from "react-icons/io5";
 import { MdOutlineStarHalf } from "react-icons/md";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import { addFavorite } from "../Utilities";
 
 
 const ProductDetails = () => {
@@ -27,6 +28,8 @@ const ProductDetails = () => {
     return stars;
   };
 
+  const [isFavorite, setIsFavourite] = useState(true)
+
   useEffect(() => {    
     const singleProduct = products.find(product => product.product_id === parseInt(id))
     console.log(singleProduct);
@@ -40,6 +43,10 @@ const ProductDetails = () => {
     return <p>Loading...</p>;
   }
 
+  const handleFavorite = (product) => {
+    addFavorite(product)
+  }
+
   return (
     <div>
       <div className="bg-[#9538E2] w-11/12 h-96 mx-auto text-center">
@@ -50,20 +57,17 @@ const ProductDetails = () => {
       </div>
       <div className="lg:flex justify-center h-[500px] max-w-4xl mx-auto bg-[#fbfafa] relative -top-52 p-4 rounded-3xl">
         <div className="p-4">
-          <img className="w-full h-full" src={product.product_image} alt="" />
+          <img className="w-full h-full rounded-3xl" src={product.product_image} alt="" />
         </div>
         <div className="p-4">
           <h3 className="text-3xl text-[#09080F] font-semibold my-2">{product.product_title}</h3>
           <p className="text-xl text-gray-700 font-semibold my-2">Price: ${product.price}</p>
-          <p className="flex justify-center text-green-700 border border-green-700 rounded-full py-1 max-w-32 items-center my-2">{product.availability ? 'In Stock' : 'Out of Stock'}</p>
+          <p className="flex justify-center text-green-700 border border-green-700 rounded-full py-1 max-w-32 items-center my-3">{product.availability ? 'In Stock' : 'Out of Stock'}</p>
           <p className="text-gray-600 my-2"> {product.description} </p>
 
           <div className="my-4">
             <h3 className="font-semibold my-2">Specification</h3>
-            <ol className="list-decimal list-inside mt-2 text-gray-600">
-              {/* {product.Specification.map((spec, i) => (
-                  <li key={i}>{spec}</li>
-                ))} */}
+            <ol className="list-decimal list-inside mt-2 text-gray-600">              
               {product.Specification?.map((spec, i) => (
                 <li key={i}>{spec}</li>
               )) || <li>No specifications available</li>
@@ -79,7 +83,7 @@ const ProductDetails = () => {
           </div>
           <div className="flex justify-start gap-8 my-3">
             <div className="flex items-center gap-1 bg-[#9538E2] py-2 px-4 rounded-full text-white"><button> Add To Card </button> <IoCartOutline className=" w-5 h-5" /></div>
-            <button className="border-2 border-gray-200 rounded-full p-2"> <MdFavoriteBorder className=" w-5 h-5" />
+            <button onClick={()=>handleFavorite(product)} className="border-2 border-gray-200 rounded-full p-2"> <MdFavoriteBorder className=" w-5 h-5" />
             </button>
           </div>
         </div>
