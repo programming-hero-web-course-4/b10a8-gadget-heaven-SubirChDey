@@ -5,11 +5,9 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 const Favorite = ({ product, handleFavRemove }) => {
     const { product_image, product_title, price, description } = product || {}
 
+
     return (
         <div className='p-8'>
-            <div className="text-2xl font-bold">
-                <h3>Cart</h3>
-            </div>
             <div className='flex justify-start gap-4 my-4 px-2 p-4 bg-white rounded-3xl'>
 
                 <div className='w-52 rounded-2xl'>

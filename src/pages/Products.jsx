@@ -23,19 +23,16 @@ const Products = () => {
   }, [category, data])
 
   return (
-    <div className="">
+    <div className="w-full h-full">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 bg-gray-100 rounded-2xl">
         {
           products.map(product => <Product key={product.id} product={product}></Product>)
         }
       </div>
-      <div className="flex justify-center border-2 border-red-500">
-        {products.length === 0 && <div><p className=" text-3xl text-center items-center border-2  w-72">No products found</p></div>}
+      {/* <div className="flex justify-center border-2 border-red-500"></div> */}
+        {products.length === 0 && <div><p className=" text-3xl flex flex-row justify-center text-center items-center">No products found</p></div>}
                 
-      </div>
-
-
-
+      
     </div>
   )
 }

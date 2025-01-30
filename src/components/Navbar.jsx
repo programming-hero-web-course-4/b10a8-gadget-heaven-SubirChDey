@@ -46,8 +46,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-4 text-black">
-                <Link className="p-2 rounded-full bg-yellow-100"> <IoCartOutline size={'20'}> </IoCartOutline> </Link>
-                <Link className="p-2 rounded-full bg-yellow-100"> <MdFavoriteBorder size={'20'}> </MdFavoriteBorder>  </Link>
+                <Link className="p-2 rounded-full"> <IoCartOutline size={'20'}> </IoCartOutline> </Link>
+                <Link className="p-2 rounded-full"> <MdFavoriteBorder size={'20'}> </MdFavoriteBorder>  </Link>
             </div>
         </div>
     )

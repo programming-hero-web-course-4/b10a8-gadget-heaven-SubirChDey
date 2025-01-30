@@ -29,6 +29,7 @@ const ProductDetails = () => {
   };
 
   const [isFavorite, setIsFavourite] = useState(true)
+  const [cost, setCost] = useState(0)
 
   useEffect(() => {
     const singleProduct = products.find(product => product.product_id === parseInt(id))
@@ -44,7 +45,11 @@ const ProductDetails = () => {
   }
   const handleCart = (product) => {
     addCart(product)
+    setCost(cost + product.price)
+    
   }
+  console.log(cost);
+  
 
   const handleFavorite = (product) => {
     addFavorite(product)

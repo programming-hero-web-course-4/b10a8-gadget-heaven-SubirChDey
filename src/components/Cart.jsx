@@ -5,8 +5,7 @@ import { useLoaderData } from 'react-router-dom';
 const Cart = ({ product, handleCartRemove }) => {
     const { product_image, product_title, price, description } = product || {}
 
-    const data = useLoaderData()
-    const [products, setProducts] = useState(data)
+    
     
 
     return (
