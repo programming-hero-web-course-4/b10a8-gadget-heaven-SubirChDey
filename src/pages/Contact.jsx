@@ -58,9 +58,9 @@ const Contact = () => {
                     <div></div>
                         <p>South Moishan Bari, South Chuariakhola, Tumilia, Kaliganj, Gazipur</p>
                     </div>
-                    <div><div className="flex">
-                        <FaPhoneAlt />
-                        <h3 className="font-semibold mb-2"> Phone:</h3>
+                    <div><div className="flex items-center gap-2">
+                        <FaPhoneAlt></FaPhoneAlt>
+                        <h3 className="font-semibold my-2"> Phone:</h3>
                     </div>
                         <p>+880 1930 660293</p>
                     </div>
