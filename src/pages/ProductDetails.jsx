@@ -44,15 +44,15 @@ const ProductDetails = () => {
     return <p>Loading...</p>;
   }
   const handleCart = (product) => {
-    addCart(product)
-    setCost(cost + product.price)
+    addCart(product)    
+    var totalPrice = setCost(cost + product.price)    
     
   }
   console.log(cost);
   
 
   const handleFavorite = (product) => {
-    addFavorite(product)
+    addFavorite(product)    
   }
 
   return (

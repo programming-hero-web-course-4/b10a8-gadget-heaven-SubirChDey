@@ -31,21 +31,23 @@ const Navbar = () => {
                         <NavLink to={'/'}>Home</NavLink>
                         <NavLink to={'/statistics'}>Statistics</NavLink>
                         <NavLink to={'/dashboard'}>Dashboard</NavLink>
-                        <NavLink to={'/trending'}>Trending</NavLink>
+                        {/* <NavLink to={'/trending'}>Trending</NavLink> */}
+                        <NavLink to={'/contact'}>Contact</NavLink>
                     </ul>
                 </div>
                 <NavLink to={'/'} className="btn btn-ghost text-xl">Gadget Heaven</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 gap-10">
+                <ul className="menu menu-horizontal px-1 gap-8">
                     <NavLink className={({isActive}) => `${isActive? 'font-bold underline': ''} hover:text-warning`} to={'/'}>Home</NavLink>
                     <NavLink className={({isActive}) => `${isActive? 'font-bold underline': ''} hover:text-warning`} to={'/statistics'}>Statistics</NavLink>
                     <NavLink className={({isActive}) => `${isActive? 'font-bold underline': ''} hover:text-warning`} to={'/dashboard'}>Dashboard</NavLink>
-                    <NavLink className={({isActive}) => `${isActive? 'font-bold underline': ''} hover:text-warning`} to={'/trending'}>Trending</NavLink>
+                    {/* <NavLink className={({isActive}) => `${isActive? 'font-bold underline': ''} hover:text-warning`} to={'/trending'}>Trending</NavLink> */}
+                    <NavLink className={({isActive}) => `${isActive? 'font-bold underline': ''} hover:text-warning`} to={'/contact'}>Contact</NavLink>
                    
                 </ul>
             </div>
-            <div className="navbar-end gap-4 text-black">
+            <div className="navbar-end gap-4">
                 <Link className="p-2 rounded-full"> <IoCartOutline size={'20'}> </IoCartOutline> </Link>
                 <Link className="p-2 rounded-full"> <MdFavoriteBorder size={'20'}> </MdFavoriteBorder>  </Link>
             </div>

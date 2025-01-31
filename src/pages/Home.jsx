@@ -27,9 +27,9 @@ const Home = () => {
         </div>        
         <Outlet></Outlet>        
       </div>
-      <div className="flex justify-center items-center">
+      {/* <div className="flex justify-center items-center">
         <button className="btn text-[#9538E2] border-2 border-[#9538E2] rounded-full font-bold hover:bg-blue-500 hover:text-white" onClick={() => navigate('/trending') }> Trending Products </button>
-      </div>
+      </div> */}
 
 
     </div>

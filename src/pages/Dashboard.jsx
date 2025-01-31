@@ -4,13 +4,18 @@ import Favorite from "../components/Favorite";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import Cart from "../components/Cart";
 // import { useLoaderData } from "react-router-dom";
-
+import Modal from "../components/Modal";
+import { FaArrowDownZA } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Dashboard = () => {
   const [cartProducts, setCartProducts] = useState([])
   const [products, setProducts] = useState([])
   const [cost, setCost] = useState(0)
   const [isActive, setIsActive] = useState(true)
+  const [isOpen, setIsOpen] = useState(false);
+
 
   useEffect(() => {
     document.title = "Dashboard | Gadget heaven";
@@ -23,10 +28,13 @@ const Dashboard = () => {
 
   const handleCartRemove = id => {
     removeCart(id)
-    console.log(id);
-
     const carts = getAllCarts()
     setCartProducts(carts)
+    toast.warn('Removed from cart', {
+      position: 'top-center',
+      autoClose: 1000,
+      hideProgressBar: true,
+    })
   }
 
   useEffect(() => {
@@ -38,16 +46,12 @@ const Dashboard = () => {
     removeFavorite(id)
     const favorites = getAllFavorites()
     setProducts(favorites)
+    toast.warn('Removed from favorite', {
+      position: 'top-center',
+      autoClose: 1000,
+      hideProgressBar: true,
+    })
   }
-
-
-
-  // const data = useLoaderData()
-  //   const [sortProducts, setSortProducts] = useState([])
-
-  //   useEffect(() => {
-  //     setSortProducts(data);  // যখন data লোড হবে, তখন sortProducts আপডেট হবে
-  // }, [data]);
 
   const handleSort = () => {
     const sorted = [...cartProducts].sort((a, b) => b.price - a.price)
@@ -80,9 +84,30 @@ const Dashboard = () => {
                 <h3>Cart</h3>
               </div>
               <div className="flex items-center justify-between gap-4">
-                <h3 className="text-2xl font-bold">Total cost: { } </h3>
-                <button onClick={() => handleSort()} className="text-lg font-semibold border-2 border-[#9538E2] text-[#9538E2] rounded-full py-2 px-4">Sort by Price</button>
-                <button className="text-lg font-semibold border-2 bg-[#9538E2] border-[#9538E2] text-white rounded-full py-2 px-9">Purchase</button>
+                <h3 className="text-2xl font-bold">Total cost: ${1500} </h3>
+                <div className="flex text-lg font-semibold border-2 border-[#9538E2] text-[#9538E2] rounded-full py-2 px-4 items-center gap-2"><button onClick={() => handleSort()} className="">Sort by Price </button> <FaArrowDownZA className="flex" /></div>
+                <button onClick={() => setIsOpen(true)} className="text-lg font-semibold border-2 bg-[#9538E2] border-[#9538E2] text-white rounded-full py-2 px-9">Purchase</button>
+                <div className="flex flex-col items-center justify-center ">
+
+                  {/* Modal */}
+                  {isOpen && (
+                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                      <div className="modal-box text-center items-center">
+                        <div className="w-full flex justify-center">
+                          <img className="flex w-20 my-4" src={'Group.png'} alt="" />
+                        </div>
+                        <h3 className="font-bold text-2xl py-6">Payment Successfully</h3>
+                        <hr />
+                        <p className="text-gray-500 mb-2 pt-4">Thanks for purchasing</p> <p className="text-gray-500">Total: $1500.00 </p>
+                        <div className="modal-action flex justify-center w-full px-8">
+                          <NavLink onClick={() => setIsOpen(false)} to={'/'} className="btn w-full rounded-full font-bold">
+                            Close
+                          </NavLink>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div> :
             <div className="flex justify-between w-11/12 mx-auto p-8">

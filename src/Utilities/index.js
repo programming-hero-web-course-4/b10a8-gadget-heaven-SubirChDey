@@ -1,3 +1,5 @@
+import { toast } from "react-toastify"
+
 // get all cart products from local storage
 const getAllCarts = () => {
     const all = localStorage.getItem('carts')
@@ -13,9 +15,17 @@ const getAllCarts = () => {
 const addCart = product => {
     const carts = getAllCarts()
     const isExist = carts.find(item => item.product_id === product.product_id)
-    if (isExist) return alert('exist')
+    if (isExist) return toast.info('Product Already Exist',{
+        autoClose: 1000,
+        hideProgressBar: true,
+    })
     carts.push(product)
     localStorage.setItem('carts', JSON.stringify(carts))
+    toast.success('Product Added Successfully',{
+        position: 'top-center',
+        autoClose: 1000,
+        hideProgressBar: true,
+    })
 }
 
 // remove cart products from local storage
@@ -41,9 +51,18 @@ const getAllFavorites = () => {
 const addFavorite = product => {
     const favorites = getAllFavorites()
     const isExist = favorites.find(item => item.product_id === product.product_id)
-    if (isExist) return alert('exist')
+    if (isExist) return toast.info('Already Added to Favorite',{
+        
+        autoClose: 1000,
+        hideProgressBar: true,
+    })
     favorites.push(product)
     localStorage.setItem('favorites', JSON.stringify(favorites))
+    toast.success('Successfully added to favorite',{
+        position: 'top-center',
+        autoClose: 1000,
+        hideProgressBar: true,
+    })
 }
 
 // remove favorite products from local storage

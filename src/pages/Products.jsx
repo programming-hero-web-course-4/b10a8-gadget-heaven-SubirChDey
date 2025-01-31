@@ -29,8 +29,8 @@ const Products = () => {
           products.map(product => <Product key={product.id} product={product}></Product>)
         }
       </div>
-      {/* <div className="flex justify-center border-2 border-red-500"></div> */}
-        {products.length === 0 && <div><p className=" text-3xl flex flex-row justify-center text-center items-center">No products found</p></div>}
+      
+        {products.length === 0 && <div className="text-3xl flex flex-col justify-center text-center items-center h-72 gap-4 text-[#9538E2]"> <img className="opacity-40" src="/bag.png" alt="" /> <p className="">No products found </p> <p className="text-2xl">Try another category</p></div>}
                 
       
     </div>

@@ -7,6 +7,7 @@ import Statistics from "../pages/Statistics";
 import ErrorPage from "../pages/ErrorPage";
 import Trending from "../pages/Trending";
 import ProductDetails from "../pages/ProductDetails";
+import Contact from "../pages/Contact";
 
 
 const router = createBrowserRouter([
@@ -41,10 +42,14 @@ const router = createBrowserRouter([
         element: <Dashboard></Dashboard>,
      
       },
+      // {
+      //   path: "trending",
+      //   element: <Trending></Trending>,
+      //   loader: () => fetch('../products.json'),
+      // },
       {
-        path: "trending",
-        element: <Trending></Trending>,
-        loader: () => fetch('../products.json'),
+        path: "contact",
+        element:<Contact></Contact>,        
       },
       {
         path: "/product/:id",
